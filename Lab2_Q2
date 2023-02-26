@@ -1,0 +1,26 @@
+#include <stdio.h>
+void main()
+{
+   int opcount = 0;
+   int m, n=0, t;
+   while(n!= -1)
+   {
+       opcount = 0;
+   printf("Enter 2 nos: ");
+   scanf("%d%d",&m,&n);
+   if(m<n)
+   {
+       t = m;
+       m = n;
+       n = t;
+   }
+   t = n;
+   while(t!=0)
+   {
+        opcount++;
+       if(m%t==0 && n%t==0) break;
+       t--;
+   }
+   printf("gcd = %d and opcount = %d\n",t,opcount);
+}
+}
